@@ -29,6 +29,7 @@ export default {
   
 }
 #logo {
+  
   width: 200px;
 }
 

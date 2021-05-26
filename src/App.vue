@@ -1,14 +1,23 @@
 <template>
+  <div>
   <infos></infos>
+  <sidebar></sidebar>
+  <projects></projects>
+
+  </div>
 </template>
 
 <script>
 
 import infos from './components/shared/info-header.vue'
+import sidebar from './components/shared/sidebar.vue'
+import projects from './components/fixed/sidebar_projects.vue'
 export default {
 
     components: {
-      'infos': infos 
+      'infos': infos,
+      'sidebar': sidebar,
+      'projects': projects
     }
 }
 </script>
