@@ -77,6 +77,6 @@ export default {
 }
 
 .sidebar_itens_wrapper p {
-    padding-left: 1.2%;
+    padding-left: 2%;
 }
 </style>

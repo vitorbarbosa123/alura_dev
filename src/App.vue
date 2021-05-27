@@ -1,8 +1,12 @@
 <template>
   <div>
   <infos></infos>
+  <div id="content_wrapper">
   <sidebar></sidebar>
+  <writer></writer>
   <projects></projects>
+  </div>
+  <codeHighlight></codeHighlight>
 
   </div>
 </template>
@@ -12,25 +16,37 @@
 import infos from './components/shared/info-header.vue'
 import sidebar from './components/shared/sidebar.vue'
 import projects from './components/fixed/sidebar_projects.vue'
+import writer from './components/fixed/writer.vue'
+import codeHighlight from './components/fixed/code_highlight.vue'
 export default {
 
     components: {
       'infos': infos,
       'sidebar': sidebar,
-      'projects': projects
+      'projects': projects,
+      'writer': writer,
+      'codeHighlight': codeHighlight
     }
 }
 </script>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 * {
   font-family: 'Inter', sans-serif;
 
 }
 body  {   
   background-color: #051D3B;
+
+}
+#content_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  
+  
 
 }
 </style>

@@ -42,6 +42,8 @@ export default {
   height: 56px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.16);
+  margin-right: 120px;
+  
 }
 
 #search::placeholder {
