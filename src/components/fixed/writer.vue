@@ -13,12 +13,17 @@
 
         </div>
       </div>
+      <codeHighlight></codeHighlight>
   </div>
 </template>
 
 <script>
+import codeHighlight from '../fixed/code_highlight.vue'
 export default {
-    props:['writer']
+    props:['writer'],
+    components: {
+      'codeHighlight': codeHighlight
+    }
 }
 </script>
 

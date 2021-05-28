@@ -8,7 +8,7 @@
                         <div class="sidebar_icon_wrapper">
                         <font-awesome-icon icon="code" class="sidebar_icons"/>
                         </div>
-                        <p>Editor de código</p>
+                        <p><a href="/">Editor de código</a></p>
                     </div>
                 </li>
                 <li class="sidebar_itens">
@@ -16,7 +16,7 @@
                         <div class="sidebar_icon_wrapper">
                         <font-awesome-icon icon="users" class="sidebar_icons"/>
                         </div>
-                        <p>Comunidade</p>
+                        <p><a href="/comunidade">Comunidade</a></p>
                     </div>
                 </li>
             </ul>
@@ -34,6 +34,7 @@ export default {
 
 .sidebar {
     margin-top: 5%;
+    margin-right: 70px;
 }
 #sidebar_title {
     font-size: 15px;
@@ -62,6 +63,11 @@ export default {
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.sidebar_itens_wrapper a {
+    text-decoration: none;
+    color: white;
 }
 .sidebar_icons {
     font-size: 20px;

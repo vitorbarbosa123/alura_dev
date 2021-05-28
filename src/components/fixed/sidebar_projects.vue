@@ -13,6 +13,10 @@
               <option value="2">Java</option>
           </select>
       </div>    
+      
+          <input type="color" class="descriptions" id="colors_input">
+          <button type="submit" id="save_btn" class="descriptions">Salvar Projeto</button>
+          
   </div>
 </template>
 
@@ -24,7 +28,11 @@ export default {
 
 <style>
 
-
+.sidebar_projects {
+    margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+}
 .projects_title {
     font-size: 12px;
     line-height: 18px;
@@ -59,4 +67,16 @@ option {
    background-color: #051D3B;
 }
 
+#save_btn {
+    margin-top: 5%;
+    background-color: #5081fb;
+    color: white;
+    border: none;
+    font-size: 16px;
+    line-height: 24px;
+    }
+#colors_input {
+    border: 1px solid #FFFFFF;
+    background: rgba(196, 196, 196, 0.01);
+}
 </style>

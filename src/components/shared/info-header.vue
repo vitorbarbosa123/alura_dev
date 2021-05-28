@@ -2,7 +2,7 @@
   <div>
       <nav class="navbar">
         <ul class="navbar_list">
-          <li class="navbar_itens"><a href=""><img src="/src/assets/logo.png" alt="Logo" id="logo"></a></li>
+          <li class="navbar_itens"><a href="/"><img src="/src/assets/logo.png" alt="Logo" id="logo"></a></li>
           <li><input type="text" placeholder="Busque por algo" id="search"></li>
           <li><div class="user">
                 <img src="/src/assets/profile.jpg" alt="" id="avatar">
@@ -38,7 +38,7 @@ export default {
 }
 
 #search {
-  width: 600px;
+  width: 590px;
   height: 56px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.16);

@@ -20,7 +20,7 @@ export default {
     justify-content: center;
 }
 #code_highlight {
-    margin-top: 30px;
+    margin-top: 5% ;
     margin-right: 20px;
     width: 600px;
     height: 56px;
