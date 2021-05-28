@@ -1,33 +1,15 @@
 <template>
-  <div>
-  <infos></infos>
   <div id="content_wrapper">
-  <sidebar></sidebar>
-  <writer></writer>
-  <projects></projects>
-  </div>
-  <codeHighlight></codeHighlight>
-
+     <router-view></router-view>
   </div>
 </template>
 
 <script>
 
-import infos from './components/shared/info-header.vue'
-import sidebar from './components/shared/sidebar.vue'
-import projects from './components/fixed/sidebar_projects.vue'
-import writer from './components/fixed/writer.vue'
-import codeHighlight from './components/fixed/code_highlight.vue'
+
 export default {
 
-    components: {
-      'infos': infos,
-      'sidebar': sidebar,
-      'projects': projects,
-      'writer': writer,
-      'codeHighlight': codeHighlight
-    }
-}
+  }
 </script>
 
 <style>
@@ -43,10 +25,5 @@ body  {
 }
 #content_wrapper {
   display: flex;
-  justify-content: space-between;
-  align-content: center;
-  
-  
-
-}
+  }
 </style>
