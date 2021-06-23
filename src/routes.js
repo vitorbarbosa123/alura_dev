@@ -1,9 +1,9 @@
 import home from './components/home/home.vue';
-import comunidade from './components/comunidade/comunidade.vue';
+import codigos from './components/meus_codigos/meus_codigos.vue';
 
 export const routes = [
 
     { path: '', component: home },
-    { path: '/comunidade', component: comunidade }
+    { path: '/meus_codigos', component: codigos }
 
   ];

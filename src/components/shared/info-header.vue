@@ -65,6 +65,11 @@ export default {
   
   
 }
+
+.user:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+}
 #avatar {
   width: 50px;
   height:50px;

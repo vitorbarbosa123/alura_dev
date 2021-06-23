@@ -5,18 +5,18 @@
             <ul class="sidebar_list">
                 <li class="sidebar_itens">
                     <div class="sidebar_itens_wrapper">
-                        <div class="sidebar_icon_wrapper">
-                        <font-awesome-icon icon="code" class="sidebar_icons"/>
+                        <div class="sidebar_icon_wrapper"> <a href="/">
+                        <font-awesome-icon icon="code" class="sidebar_icons"/></a>
                         </div>
                         <p><a href="/">Editor de código</a></p>
                     </div>
                 </li>
                 <li class="sidebar_itens">
-                    <div class="sidebar_itens_wrapper">
-                        <div class="sidebar_icon_wrapper">
-                        <font-awesome-icon icon="users" class="sidebar_icons"/>
+                    <div class="sidebar_itens_wrapper"> 
+                        <div class="sidebar_icon_wrapper"><a href="/meus_codigos">
+                        <font-awesome-icon icon="bookmark" class="sidebar_icons"/> </a>
                         </div>
-                        <p><a href="/comunidade">Comunidade</a></p>
+                        <p><a href="/meus_codigos">Meus códigos</a></p>
                     </div>
                 </li>
             </ul>
@@ -74,12 +74,18 @@ export default {
     padding-left: 25%;
     padding-top: 25%;
 }
+
+.sidebar_icon_wrapper:hover {
+    background: rgba(80, 129, 251, 0.64);
+}
+.sidebar_icon_wrapper:focus {
+    background: #5081FB;
+}
 .sidebar_icon_wrapper {
     width: 48px;
     height: 48px;
-    background: #5081FB;
+    background: rgba(80, 129, 251, 0.16);
     border-radius: 16px;
-    ;
 }
 
 .sidebar_itens_wrapper p {

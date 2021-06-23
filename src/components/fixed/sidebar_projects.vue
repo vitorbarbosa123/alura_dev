@@ -22,7 +22,8 @@
 
 <script>
 export default {
-    props:['projects']
+    props:['projects'],
+
 }
 </script>
 
@@ -54,11 +55,14 @@ export default {
     border-radius: 8px;
 
 }
-
+.descriptions:hover {
+    background-color: rgba(255, 255, 255, 0.24)
+}
 .descriptions::placeholder {
     color: white;
     opacity: 0.64;
 }
+ 
 input, select, textarea{
     color: white;
 }
@@ -75,6 +79,19 @@ option {
     font-size: 16px;
     line-height: 24px;
     }
+#save_btn:hover {
+    background: #7BA4FC;
+    border: rgba(80, 129, 251, 0.16);
+}
+
+#save_btn:pressed {
+    background-color:  #7BA4FC;
+}
+
+#save_btn:focus {
+    background-color: #96B9FD;
+    border: 4px solid rgba(80, 129, 251, 0.24);
+}
 #colors_input {
     border: 1px solid #FFFFFF;
     background: rgba(196, 196, 196, 0.01);

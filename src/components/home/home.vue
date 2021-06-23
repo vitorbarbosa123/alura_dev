@@ -15,15 +15,13 @@ import infos from '../shared/info-header.vue'
 import sidebar from '../shared/sidebar.vue'
 import projects from '../fixed/sidebar_projects.vue'
 import writer from '../fixed/writer.vue'
-
 export default {
 
     components: {
-      'infos': infos,
-      'sidebar': sidebar,
-      'projects': projects,
-      'writer': writer,
-      
+      infos,
+      sidebar,
+      projects,
+      writer,
     }
 }
 </script>

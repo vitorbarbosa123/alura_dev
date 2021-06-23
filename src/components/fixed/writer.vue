@@ -1,33 +1,47 @@
 <template>
-  <div>
+  <main>
       <div class="coding_wrapper">
         <div class="coding_box">
-          <div id="elipses">
+          <div class="elipses">
             <div class="elipse"></div>
             <div class="elipse"></div>
             <div class="elipse"></div>
-            </div>
-          <div class="code_text">
-            <p>const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj) const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res) const unfold = (f, seed) => { const go = (f, seed, acc) => { const res = f(seed) return res ? go(f, res[1], acc.concat([res[0]])) : acc } return go(f, seed,</p>
           </div>
-
+          <div class="code_text_area"> 
+            <code 
+              class="preview hljs javascript"
+              contenteditable="true"
+              aria-label="editor"
+            ></code>  
+          </div>
         </div>
       </div>
-      <codeHighlight></codeHighlight>
+      <div class="code_wrapper" >
+      <button @click="highlightVisualize()" id="code_highlight">
+          <p>Visualizar com o highlight</p>
+      </button>
   </div>
+  </main>
 </template>
 
 <script>
-import codeHighlight from '../fixed/code_highlight.vue'
+import hljs from 'highlight.js';
+
 export default {
     props:['writer'],
-    components: {
-      'codeHighlight': codeHighlight
-    }
+    methods: {
+      highlightVisualize(){
+        const codeEditor = document.querySelector('.code_text_area');
+        const code = codeEditor.querySelector('code');
+        hljs.highlightElement(code);
+    }      
+}
 }
 </script>
 
 <style>
+
+@import '../../external_styles/dracula.css';
 .coding_wrapper {
   display: flex;
   align-items: center;
@@ -48,19 +62,21 @@ export default {
   border-radius: 8px;
 }
 
-.code_text {
+.code_text_area {
   color: white;
   font-family: 'Roboto Mono', monospace;
   padding: 1.5%;
   font-size: 14px;
   line-height: 25px;
   margin-left: 1%;
+  border: none;
 
 /* Neutral/$white */
 
 color: #FFFFFF;;
 }
-#elipses {
+
+.elipses {
   display: flex;
   flex-direction: row;
   margin-top: 5%;
@@ -86,5 +102,33 @@ color: #FFFFFF;;
 }
 .elipse:last-child {
   background-color: #27C93F;
+}
+
+.code_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#code_highlight {
+    margin-top: 5% ;
+    margin-right: 20px;
+    width: 600px;
+    height: 56px;
+    background: rgba(80, 129, 251, 0.08);
+    border-radius: 8px;
+    border: none;
+}
+.code_wrapper p {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.hljs {
+  color: white;
+  background-color:  #141414;
+  font-size: 1.2em;
 }
 </style>
